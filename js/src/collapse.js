@@ -79,7 +79,7 @@ class Collapse extends BaseComponent {
       const filterElement = SelectorEngine.find(selector)
         .filter(foundElem => foundElem === this._element)
 
-      if (selector !== null && filterElement.length) {
+      if (selector && filterElement.length) {
         this._selector = selector
         this._triggerArray.push(elem)
       }
