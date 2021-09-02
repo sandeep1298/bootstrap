@@ -479,7 +479,7 @@ $(function () {
     $target1.trigger('click')
 
     setTimeout(function () {
-      assert.strictEqual(showFired, false, 'show event did not fire')
+      assert.false(showFired, 'show event did not fire')
       done()
     }, 1)
   })

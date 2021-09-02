@@ -886,7 +886,8 @@ $(function () {
 
     var $modalBody = $('.modal-body')
     $modalBody.scrollTop(100)
-    assert.true($modalBody.scrollTop() > 95 && $modalBody.scrollTop() <= 100)
+    assert.true($modalBody.scrollTop() > 95)
+    assert.true($modalBody.scrollTop() <= 100)
 
     $modal.on('shown.bs.modal', function () {
       assert.strictEqual($modalBody.scrollTop(), 0, 'modal body scrollTop should be 0 when opened')
@@ -930,7 +931,7 @@ $(function () {
       }, 10)
     })
       .on('hidden.bs.modal', function () {
-        assert.strictEqual(true, false, 'should not hide the modal')
+        assert.true(false, 'should not hide the modal')
       })
       .bootstrapModal({
         backdrop: 'static'
@@ -978,7 +979,7 @@ $(function () {
       }, 10)
     })
       .on('hidden.bs.modal', function () {
-        assert.strictEqual(false, true, 'should not hide the modal')
+        assert.false(true, 'should not hide the modal')
       })
       .bootstrapModal({
         keyboard: false

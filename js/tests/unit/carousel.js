@@ -475,7 +475,7 @@ $(function () {
     $carousel.attr('data-interval', false)
     $carousel.appendTo('body')
     $carousel.bootstrapCarousel(1)
-    assert.strictEqual($carousel.data('bs.carousel')._config.interval, false, 'data attribute has higher priority than default options')
+    assert.false($carousel.data('bs.carousel')._config.interval, 'data attribute has higher priority than default options')
     $carousel.remove()
   })
 

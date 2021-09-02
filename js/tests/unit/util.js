@@ -69,7 +69,7 @@ $(function () {
 
     Util.typeCheckConfig(namePlugin, config, defaultType)
 
-    assert.strictEqual(true, true)
+    assert.true(true)
   })
 
   QUnit.test('Util.isElement should check if we passed an element or not', function (assert) {
